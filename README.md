@@ -11,3 +11,4 @@ A program that takes a room dimension as coordinates and has a Roomba location s
 ## Features
 The room knows:
 - It's dimensions
+- Where the dirt is
