@@ -17,3 +17,4 @@ The roomba knows:
 - It's current position
 - Roomba can move North
 - Roomba can move East
+- Roomba can move South

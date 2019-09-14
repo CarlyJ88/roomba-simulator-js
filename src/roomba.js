@@ -11,8 +11,11 @@ class Roomba {
   move(directions) {
     if (directions === 'N') {
       this.position.y += 1;
-    } else {
+    } 
+    else if (directions === 'E') {
       this.position.x += 1;
+    } else {
+      this.position.x -= 1;
     }
     return this.position;
   }
