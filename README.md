@@ -18,3 +18,4 @@ The roomba knows:
 - Roomba can move North
 - Roomba can move East
 - Roomba can move South
+- Roomba can move West

@@ -14,6 +14,8 @@ class Roomba {
     } 
     else if (directions === 'E') {
       this.position.x += 1;
+    } else if (directions === 'S') {
+      this.position.y -= 1;
     } else {
       this.position.x -= 1;
     }

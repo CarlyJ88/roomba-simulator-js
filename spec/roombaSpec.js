@@ -20,6 +20,12 @@ describe("Roomba", function() {
   it("moves South by 1", function() {
     room = new Room({x: 5, y: 5})
     roomba = new Roomba({x: 5, y: 5}, room)
-    expect(roomba.move('S')).toEqual({x: 4, y: 5})
+    expect(roomba.move('S')).toEqual({x: 5, y: 4})
+  })
+
+  it("moves West by 1", function() {
+    room = new Room({x: 5, y: 5})
+    roomba = new Roomba({x: 5, y: 5}, room)
+    expect(roomba.move('W')).toEqual({x: 4, y: 5})
   })
 })
