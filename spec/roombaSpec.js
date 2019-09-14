@@ -53,4 +53,23 @@ describe("Roomba", function() {
     expect(roomba.move('N')).toEqual({ x: 5, y: 5 })
   })
 
+  it("Cleans one patch of available dirt", function() {
+    room = new Room({x: 5, y: 5})
+    roomba = new Roomba({ x: 0, y: 0 }, room)
+    room.addDirt({ x: 0, y: 1 })
+    roomba.move('N')
+    expect(roomba.collectedDirt()).toEqual(1)
+  })
+
+  it("Cleans two patches of available dirt", function() {
+    room = new Room({ x: 5, y: 5 })
+    roomba = new Roomba({ x: 0, y: 0 }, room)
+    room.addDirt({ x: 0, y: 1 })
+    room.addDirt({ x: 1, y: 1 })
+    roomba.move('N')
+    roomba.move('E')
+    expect(roomba.collected_dirt).toEqual(2)
+  })
+
+
 })

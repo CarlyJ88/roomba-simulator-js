@@ -2,6 +2,8 @@ class Roomba {
   constructor(position, room) {
     this.position = position;
     this.room = room;
+    this.collected_dirt = 0
+    // console.log(this)
   }
 
   currentPosition() {
@@ -19,6 +21,15 @@ class Roomba {
     } else {
       this.position.x > 0 ? this.position.x -= 1 : this.position;
     }
+    this.room.available_dirt.forEach((dirt) => {
+     this.position.x === dirt.x && this.position.y === dirt.y ? this.collected_dirt += 1 : this.collected_dirt;
+     console.log(this.collected_dirt);
+    })
+    // console.log(this);
     return this.position;
+  }
+
+  collectedDirt() {
+    return this.collected_dirt;
   }
 }
