@@ -28,4 +28,29 @@ describe("Roomba", function() {
     roomba = new Roomba({x: 5, y: 5}, room)
     expect(roomba.move('W')).toEqual({x: 4, y: 5})
   })
+
+  it("cannot move South if next to the wall", function() {
+    room = new Room({x: 5, y: 5})
+    roomba = new Roomba({ x: 0, y: 0 }, room)
+    expect(roomba.move('S')).toEqual({ x: 0, y: 0 })
+  })
+
+  it("cannot move West if next to the wall", function() {
+    room = new Room({x: 5, y: 5})
+    roomba = new Roomba({ x: 0, y: 0 }, room)
+    expect(roomba.move('W')).toEqual({ x: 0, y: 0 })
+  })
+
+  it("cannot move East if next to the wall", function() {
+    room = new Room({x: 5, y: 5})
+    roomba = new Roomba({ x: 5, y: 5 }, room)
+    expect(roomba.move('E')).toEqual({ x: 5, y: 5 })
+  })
+
+  it("cannot move North if next to the wall", function() {
+    room = new Room({x: 5, y: 5})
+    roomba = new Roomba({ x: 5, y: 5 }, room)
+    expect(roomba.move('N')).toEqual({ x: 5, y: 5 })
+  })
+
 })

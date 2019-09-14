@@ -19,3 +19,4 @@ The roomba knows:
 - Roomba can move East
 - Roomba can move South
 - Roomba can move West
+- Does not move outside the parameters of the room
