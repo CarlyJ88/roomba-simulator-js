@@ -8,9 +8,12 @@ class Roomba {
     return this.position
   }
 
-  move(direction) {
-    console.log(this.position.y);
-    this.position.y += 1;
+  move(directions) {
+    if (directions === 'N') {
+      this.position.y += 1;
+    } else {
+      this.position.x += 1;
+    }
     return this.position;
   }
 }
