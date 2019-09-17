@@ -11,4 +11,10 @@ describe("Input", function() {
     input.readFile()
     expect(input.roomDimensions()).toEqual({ x: 5, y: 5 })
   })
+
+  it("Gets the roomba location", function() {
+    var input = new Input();
+    input.readFile()
+    expect(input.roombaLocation()).toEqual({ x: 1, y: 2 })
+  })
 })
