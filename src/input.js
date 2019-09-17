@@ -8,7 +8,16 @@ module.exports= class Input {
 
   readFile() {
     const text = fs.readFileSync('input.txt').toString();
-    const textByLine = text.split("\n");
-    return textByLine;
+    this.lines = text.split("\n");
+    return this.lines;
+  }
+
+  roomDimensions() {
+    // console.log(typeof this.lines[0])
+    const array = this.lines[0].split(" ").map((line) => {
+      console.log(parseInt(line));
+      return parseInt(line);
+    })
+    return { x: array[0], y: array[1] }
   }
 }

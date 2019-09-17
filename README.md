@@ -25,3 +25,4 @@ The roomba knows:
 
 Input can:
 - Read the file contents
+- Get the room dimensions
