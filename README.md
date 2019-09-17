@@ -21,3 +21,4 @@ The roomba knows:
 - Roomba can move West
 - Does not move outside the parameters of the room
 - Roomba can collect dirt
+- Roomba will not clean same patch of dirt twice if already removed

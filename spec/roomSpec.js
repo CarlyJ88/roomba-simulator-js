@@ -1,5 +1,7 @@
-describe("Room", function() {
+var Room = require('../src/room');
 
+describe("Room", function() {
+  var room;
   beforeEach(function () {
     room = new Room({x: 5, y: 5});
   })
