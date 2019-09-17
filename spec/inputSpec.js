@@ -17,4 +17,10 @@ describe("Input", function() {
     input.readFile()
     expect(input.roombaLocation()).toEqual({ x: 1, y: 2 })
   })
+
+  it("Gets the location of dirt patches", function() {
+    var input = new Input();
+    input.readFile()
+    expect(input.patchesOfDirt()).toEqual([{ x: 1, y: 0 }, { x: 2, y: 2 }, { x: 2, y: 3 }])
+  })
 })
