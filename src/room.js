@@ -15,5 +15,5 @@ module.exports = class Room {
 
   availableDirt() {
     return this.available_dirt;
-  } // check and update test and only commit this after commiting other stuff same goes for inout files
+  }
 }

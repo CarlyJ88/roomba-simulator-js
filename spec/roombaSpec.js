@@ -1,11 +1,3 @@
-// jest.mock('../src/room', ()=>{
-//   return jest.fn().mockImplementation(()=>{
-//     return {
-//       addDirt: jest.fn(),
-//       dimensions: ()=>({x:5, y:5})
-//     }
-//   });
-// });
 var Room = require('../src/room')
 var Roomba = require('../src/roomba');
 
