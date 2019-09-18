@@ -29,14 +29,16 @@ module.exports= class Input {
   patchesOfDirt() {
     let array;
     const dirt_lines = this.lines.slice(2, -1).map((line) => {
-      console.log(line)
       array = line.split(" ").map((line) => {
         return parseInt(line);
       })
       return { x: array[0], y: array[1] }
     })
     return dirt_lines;
-    
+  }
+
+  drivingInstructions() {
+    return this.lines.slice(-1)[0].split("")
   }
 
 }

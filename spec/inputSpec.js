@@ -23,4 +23,10 @@ describe("Input", function() {
     input.readFile()
     expect(input.patchesOfDirt()).toEqual([{ x: 1, y: 0 }, { x: 2, y: 2 }, { x: 2, y: 3 }])
   })
+
+  it("Get's the driving instructions", function() {
+    var input = new Input();
+    input.readFile()
+    expect(input.drivingInstructions()).toEqual(['N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W'])
+  })
 })
