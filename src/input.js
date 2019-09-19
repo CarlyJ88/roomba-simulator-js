@@ -1,4 +1,3 @@
-// debugger;
 var fs = require("fs");
 
 module.exports= class Input {
@@ -40,5 +39,4 @@ module.exports= class Input {
   drivingInstructions() {
     return this.lines.slice(-1)[0].split("")
   }
-
 }
