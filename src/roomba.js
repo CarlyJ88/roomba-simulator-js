@@ -29,13 +29,17 @@ class Roomba {
 
   howMuchDirt (position) {
     var cleaingDirt = this.room.availableDirt().find((dirt) => {
-      return position.x === dirt.x && position.y === dirt.y
+      return this.isOnDirt(position.x, position.y, dirt.x, dirt.y)
     })
     if (cleaingDirt) {
       this.collected_dirt++
       var dirtIndex = this.room.availableDirt().indexOf(cleaingDirt)
       this.room.availableDirt().splice(dirtIndex, 1)
     }
+  }
+
+  isOnDirt (positionx, positiony, dirtx, dirty) {
+    return positionx === dirtx && positiony === dirty
   }
 }
 
