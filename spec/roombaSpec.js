@@ -1,5 +1,5 @@
-var Room = require('../src/room')
-var Roomba = require('../src/roomba');
+import Room from '../src/room';
+import Roomba from '../src/roomba';
 
 
 describe("Roomba", function() {

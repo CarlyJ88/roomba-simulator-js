@@ -1,6 +1,6 @@
-var fs = require("fs");
+import fs from "fs";
 
-module.exports= class Input {
+class Input {
   constructor() {
     this.lines = [];
   }
@@ -40,3 +40,5 @@ module.exports= class Input {
     return this.lines.slice(-1)[0].split("")
   }
 }
+
+export default Input;

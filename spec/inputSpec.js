@@ -1,4 +1,4 @@
-var Input = require('../src/input');
+import Input from '../src/input';
 
 describe("Input", function() {
   it("Converts the file into array of strings", function() {

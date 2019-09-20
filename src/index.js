@@ -1,17 +1,17 @@
-var Room = require("./room");
-var Roomba = require("./roomba");
-var Input = require("./input");
+import Room from "./room";
+import Roomba from "./roomba";
+import Input from "./input";
 
 function controller() {
-  input = new Input()
+  var input = new Input()
   input.readFile()
-  dimensions = input.roomDimensions()
-  room = new Room(dimensions)
+  var dimensions = input.roomDimensions()
+  var room = new Room(dimensions)
   input.patchesOfDirt().forEach((dirt) => {
     room.addDirt(dirt)
   })
-  position = input.roombaLocation()
-  roomba = new Roomba(position, room)
+  var position = input.roombaLocation()
+  var roomba = new Roomba(position, room)
   input.drivingInstructions().forEach((direction) => {
         roomba.move(direction)
   })
@@ -19,5 +19,4 @@ function controller() {
   console.log(roomba.collectedDirt())
 }
 
-// controller
 controller();

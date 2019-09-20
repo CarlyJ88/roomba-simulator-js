@@ -1,4 +1,4 @@
-module.exports = class Room {
+class Room {
   constructor(dimension) {
     this.dimension = dimension;
     this.available_dirt = []
@@ -17,3 +17,5 @@ module.exports = class Room {
     return this.available_dirt;
   }
 }
+
+export default Room;

@@ -1,4 +1,4 @@
-var Room = require('../src/room');
+import Room from '../src/room';
 
 describe("Room", function() {
   var room;

@@ -1,4 +1,4 @@
-module.exports = class Roomba {
+class Roomba {
   constructor(position, room) {
     this.position = position;
     this.room = room;
@@ -35,3 +35,5 @@ module.exports = class Roomba {
     return this.collected_dirt;
   }
 }
+
+export default Roomba;
