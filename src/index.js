@@ -1,8 +1,8 @@
-import Room from "./room";
-import Roomba from "./roomba";
-import Input from "./input";
+import Room from './room'
+import Roomba from './roomba'
+import Input from './input'
 
-function controller() {
+function controller () {
   var input = new Input()
   input.readFile()
   var dimensions = input.roomDimensions()
@@ -13,10 +13,10 @@ function controller() {
   var position = input.roombaLocation()
   var roomba = new Roomba(position, room)
   input.drivingInstructions().forEach((direction) => {
-        roomba.move(direction)
+    roomba.move(direction)
   })
   console.log(`${roomba.currentPosition().x} ${roomba.currentPosition().y}`)
   console.log(roomba.collectedDirt())
 }
 
-controller();
+controller()
