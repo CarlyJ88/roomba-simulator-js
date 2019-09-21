@@ -16,6 +16,11 @@ class Room {
   availableDirt () {
     return this.available_dirt
   }
+
+  isInTheRoom(position) {
+    return position.x >= 0 && position.x <= this.dimension.x 
+    && position.y >= 0 && position.y <= this.dimension.x
+  }
 }
 
 export default Room

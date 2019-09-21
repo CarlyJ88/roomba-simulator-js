@@ -10,16 +10,20 @@ class Roomba {
   }
 
   move (directions) {
+    const position = {...this.position}
     if (directions === 'N') {
-      this.position.y < this.room.dimensions().y ? this.position.y += 1 : this.position
+      position.y += 1
     } else if (directions === 'E') {
-      this.position.x < this.room.dimensions().x ? this.position.x += 1 : this.position
+      position.x += 1
     } else if (directions === 'S') {
-      this.position.y > 0 ? this.position.y -= 1 : this.position
+      position.y -= 1
     } else {
-      this.position.x > 0 ? this.position.x -= 1 : this.position
+      position.x -= 1
     }
-    this.howMuchDirt(this.position)
+    if(this.room.isInTheRoom(position)){
+      this.position = position;
+    }
+    this._howMuchDirt(this.position)
     return this.position
   }
 
@@ -27,9 +31,9 @@ class Roomba {
     return this.collected_dirt
   }
 
-  howMuchDirt (position) {
+  _howMuchDirt (position) {
     var cleaingDirt = this.room.availableDirt().find((dirt) => {
-      return this.isOnDirt(position.x, position.y, dirt.x, dirt.y)
+      return this._isOnDirt(position.x, position.y, dirt.x, dirt.y)
     })
     if (cleaingDirt) {
       this.collected_dirt++
@@ -38,7 +42,7 @@ class Roomba {
     }
   }
 
-  isOnDirt (positionx, positiony, dirtx, dirty) {
+  _isOnDirt (positionx, positiony, dirtx, dirty) {
     return positionx === dirtx && positiony === dirty
   }
 }

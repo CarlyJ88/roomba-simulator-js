@@ -2,8 +2,9 @@ import Room from '../src/room'
 import Roomba from '../src/roomba'
 
 describe('Roomba', function () {
+  var room 
   beforeEach(function () {
-    var room = new Room({ x: 5, y: 5 })
+   room = new Room({ x: 5, y: 5 })
   })
 
   describe('Roomba directions', function () {

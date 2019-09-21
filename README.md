@@ -10,7 +10,8 @@ A program that takes a room dimension as coordinates and has a Roomba location s
 - Run the command `node src/index.js` in your terminal
 
 ## How to run the tests
-- Type `node_modules/.bin/jest --init`
+- Run the command `node_modules/.bin/jest --init`
+- To test the code run the command `npm run test:watch`
 
 ## Features
 The room knows:
